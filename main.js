@@ -15,47 +15,24 @@ var planets = [
 ];
 
 
-var select = document.getElementById('planets');
-var newOption = document.createElement('option');
+
+var select = document.getElementById('planets'); //this line makes the ID planets from index.html into a variable to be used in JS. I'm k
+
+planets.forEach(function(element){ //forEach is used to loop the array above once
+
+  var theMarbles = document.createTextNode(element[0]); //this var turns the array into text. element[0] is used pull only the first index from each array
+  var newOption = document.createElement('option'); //this var is used to create an element which will later to generate this element into the html
+  newOption.appendChild(theMarbles); //the formula is parent.attach.child we want all the text from the array to be options ergo options is the parent
+  select.appendChild(newOption); //we use the var which pulls the ID from index.html and attaches it as the parent to the newly fused options with text.
+
+}); 
 
 
-planets.forEach(function(element){
-  var spaceMarbles = document.createTextNode(element[0]);
-  // var foo = document.createTextNode()
-  console.log(spaceMarbles);
-  newOption.appendChild(spaceMarbles);
-  // idk.appendChild(select);
-});
-
-//create element option create textnode from element index position 0
-// append that text node to the option element created earlier
-// append that var to that original select 
-
-
-var weight = document.getElementById('user-weight');
-
-
-  // text node index position 0 from an element
-  // append child to planet name drop down menu
   // inside calculate weight function take in user weight into the function argument.
   // grab elements by id planets and user weight by their selected values.
   // declear something that say the gravity will be equal to the planet they choose by the number of that planet.
   // user weight x gravity.
-  // 
-
-
-// We're going to solve this by breaking the problem into three parts.
-// Programmers like automating things, we'll populate the HTML drop down options using code,
-// instead of having to type out all the values.
-// Create a function that does the some math and gives us the new weight.
-// Then create a function that responds when the user clicks on the button.
-
-// 1. Populate the dropdown element with the data found in the planets array.
-// The value of each option should be the planet's name.
-// Use the following built-in methods:
-// `.forEach` `document.createElement` `document.getElementById` `.appendChild`
-
-
+var weight = document.getElementById('user-weight');
 
 function calculateWeight(weight, planetName) {
   // 2. Write the code to return the correct weight
@@ -63,15 +40,19 @@ function calculateWeight(weight, planetName) {
 }
 
 function handleClickEvent(e) {
-  // 3. Create a variable called userWeight and assign the value of the user's weight.
-
-  // 4. Create a variable called planetName and assign the name of the selected planet from the drop down.
-
-  // 5. Create a variable called result and assign the value of the new calculated weight.
-
-  // 6. Write code to display the message shown in the screenshot.
-
+//   // 3. Create a variable called userWeight and assign the value of the user's weight.
+// var userWeight = //input from html
+//   // 4. Create a variable called planetName and assign the name of the selected planet from the drop down.
+// var planetName = //planet selected from dropdown
+//   // 5. Create a variable called result and assign the value of the new calculated weight.
+// var result = //input * planetgravity
+//   // 6. Write code to display the message shown in the screenshot.
+  console.log('help');
 }
+// document.getElementById('calculate-button').onclick = functionFoo()
+
+
+
 
 // 7. Set the #calculate-button element's onclick method to use the handleClickEvent function.
 
