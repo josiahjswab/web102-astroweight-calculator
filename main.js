@@ -14,22 +14,25 @@ var planets = [
   ['Sun', 27.9]
 ];
 
-function planetsLoop(){
-  for (var i=0; i<planets.length; i++){
-    console.log(planets[i][0]);
-  }
-}
 
-planetsLoop();
-// var select = document.getElementById('planets');
-// var weight = document.getElementById('user-weight');
+var select = document.getElementById('planets');
+var newOption = document.createElement('option');
 
-// function createOption(){
-//   var newElement = document.createElement('option');
-//   newElement.appendChild([planets.length-1][0]);
-// }
 
-// createOption();
+planets.forEach(function(element){
+  var spaceMarbles = document.createTextNode(element[0]);
+  // var foo = document.createTextNode()
+  console.log(spaceMarbles);
+  newOption.appendChild(spaceMarbles);
+  // idk.appendChild(select);
+});
+
+//create element option create textnode from element index position 0
+// append that text node to the option element created earlier
+// append that var to that original select 
+
+
+var weight = document.getElementById('user-weight');
 
 
   // text node index position 0 from an element
