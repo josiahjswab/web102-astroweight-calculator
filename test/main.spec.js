@@ -12,7 +12,7 @@ const url = 'http://localhost:8888/index.html';
 
 
 describe('Change Calculator', function () {
-  this.timeout(10000);
+  this.timeout(20000);
   this.slow(3000);
 
   it('should load successfully', () => axios.get(url).then(r => expect(r.status === 200)));

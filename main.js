@@ -13,21 +13,12 @@ var planets = [
   ['Sun', 27.9]
 ];
 
-// We're going to solve this by breaking the problem into three parts.
-// Programmers like automating things, we'll populate the HTML drop down options using code,
-// instead of having to type out all the values.
-// Create a function that does the some math and gives us the new weight.
-// Then create a function that responds when the user clicks on the button.
+planets.forEach(createSelection);// var.forEach(function) this pulles the all the objects from the array making them parameters forEach and exectues the function/parameter
 
-// 1. Populate the dropdown element with the data found in the planets array.
-// The value of each option should be the planet's name.
-// Use the following built-in methods:
-// `.forEach` `document.createElement` `document.getElementById` `.appendChild`
-planets.forEach(createSelection);
-
-function createSelection(item) {
-  var option = document.createElement('option');
-  document.getElementById('planets').appendChild(option).textContent = item[0];
+function createSelection(item) { // function called above which is also the parent of the above arrays.
+  var option = document.createElement('option'); // brings into exsistence the element option which is attached to the variable option. This is done for clarity. 
+  var dropdownplanets = document.getElementById('planets')
+  dropdownplanets.appendChild(option).textContent = item[0];
 }
 
 
