@@ -1,14 +1,3 @@
-// .----------------.  .----------------.  .----------------. 
-// | .--------------. || .--------------. || .--------------. |
-// | |  _______     | || |      __      | || |  ________    | |
-// | | |_   __ \    | || |     /  \     | || | |_   ___ `.  | |
-// | |   | |__) |   | || |    / /\ \    | || |   | |   `. \ | |
-// | |   |  __ /    | || |   / ____ \   | || |   | |    | | | |
-// | |  _| |  \ \_  | || | _/ /    \ \_ | || |  _| |___.' / | |
-// | | |____| |___| | || ||____|  |____|| || | |________.'  | |
-// | |              | || |              | || |              | |
-// | '--------------' || '--------------' || '--------------' |
-//  '----------------'  '----------------'  '----------------' 
 var planets = [
   ['Pluto', 0.06],
   ['Neptune', 1.148],
@@ -44,6 +33,6 @@ function handleClickEvent() {//this function is fired when button is clicked
   var weight = parseFloat(document.getElementById('user-weight').value);// var assigned to the value input by the user
   var planetName = document.getElementById('planets').value;// var assigned to the value of the planet selected by user
   var result = calculateWeight(weight, planetName);// the above function given a new name to keep code clear and clean.
-  document.getElementById('output').innerHTML = ' If you were on ' + planetName + ', you would weigh ' + result + 'lbs';//innerHTML is writing the following string to the ID output in the html file
+  document.getElementById('output').innerHTML = ' If you were on ' + planetName + ',' + ' you would weigh ' + result + 'lbs!';//innerHTML is writing the following string to the ID output in the html file
   document.body.innerHTML = document.body.innerHTML.replace('NaN', '0');//before adding this code above if you had not input a numerical value the input would return NaN now it returns 0
 }
